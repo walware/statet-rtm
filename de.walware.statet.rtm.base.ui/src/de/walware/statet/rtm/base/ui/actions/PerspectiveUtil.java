@@ -93,7 +93,7 @@ public class PerspectiveUtil {
 		}
 		else {
 			StatusManager.getManager().handle(new Status(IStatus.ERROR, RtModelUIPlugin.PLUGIN_ID,
-					NLS.bind("Unable to find perspective with id '{0}'.", finalPerspId) )); //$NON-NLS-1$
+					NLS.bind("Unable to find perspective with id ''{0}''.", finalPerspId) )); //$NON-NLS-1$
 			return;
 		}
 		

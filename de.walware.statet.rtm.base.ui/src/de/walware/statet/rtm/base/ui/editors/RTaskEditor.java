@@ -209,7 +209,7 @@ public abstract class RTaskEditor extends EFEditor {
 	@Override
 	protected void operationFailed(final String operation, final Exception e) {
 		StatusManager.getManager().handle(new Status(IStatus.ERROR, RtModelUIPlugin.PLUGIN_ID, 0,
-				NLS.bind("An error occurred when '{0}' in R task editor.", operation),
+				NLS.bind("An error occurred when ''{0}'' in R task editor.", operation),
 				e ));
 	}
 	
