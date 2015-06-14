@@ -35,7 +35,7 @@ import de.walware.ecommons.graphics.core.HSVColorDef;
 import de.walware.ecommons.graphics.core.NamedColorDef;
 import de.walware.ecommons.graphics.core.NumberedRefColorDef;
 import de.walware.ecommons.ltk.AstInfo;
-import de.walware.ecommons.text.StringParseInput;
+import de.walware.ecommons.text.core.input.StringParserInput;
 import de.walware.ecommons.ui.components.DoubleText;
 import de.walware.ecommons.ui.components.ObjValueEvent;
 
@@ -89,9 +89,9 @@ public class ColorType extends TypeDef implements PaintListener, Listener {
 		ColorDef newValue = null;
 		if (newExpr != null && newExpr.getTypeKey() == RTypedExpr.R) {
 			try {
-				final RScanner scanner = new RScanner(new StringParseInput(newExpr.getExpr()),
-						AstInfo.LEVEL_MODEL_DEFAULT );
-				newValue = fRGraphicFunctions.parseColorDef(scanner.scanExpr());
+				final RScanner scanner= new RScanner(AstInfo.LEVEL_MODEL_DEFAULT);
+				newValue = fRGraphicFunctions.parseColorDef(scanner.scanExpr(
+						new StringParserInput(newExpr.getExpr()).init() ));
 			}
 			catch (final Exception e) {
 				StatusManager.getManager().handle(new Status(IStatus.ERROR, RtModelUIPlugin.PLUGIN_ID,
