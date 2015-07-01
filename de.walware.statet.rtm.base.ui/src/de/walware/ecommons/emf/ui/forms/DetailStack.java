@@ -26,7 +26,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 
-import de.walware.ecommons.databinding.DataBindingSubContext;
+import de.walware.ecommons.databinding.core.DataBindingSubContext;
 import de.walware.ecommons.emf.core.util.IEMFEditContext;
 import de.walware.ecommons.emf.ui.databinding.DetailContext;
 

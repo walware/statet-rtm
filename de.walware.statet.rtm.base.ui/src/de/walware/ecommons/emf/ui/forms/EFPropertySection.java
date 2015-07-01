@@ -20,7 +20,7 @@ import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.views.properties.tabbed.AbstractPropertySection;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 
-import de.walware.ecommons.databinding.DataBindingSubContext;
+import de.walware.ecommons.databinding.core.DataBindingSubContext;
 import de.walware.ecommons.emf.core.util.IEMFEditContext;
 
 
