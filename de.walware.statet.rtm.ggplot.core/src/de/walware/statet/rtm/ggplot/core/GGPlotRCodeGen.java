@@ -19,8 +19,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import de.walware.ecommons.collections.ConstArrayList;
-import de.walware.ecommons.collections.ConstList;
+import de.walware.jcommons.collections.ImCollections;
+import de.walware.jcommons.collections.ImList;
+
 import de.walware.ecommons.collections.IntArrayMap;
 import de.walware.ecommons.collections.IntMap;
 
@@ -175,7 +176,7 @@ public class GGPlotRCodeGen extends AbstractRCodeGenerator {
 		}
 	}
 	
-	private static final ConstList<String> DIRECT_TYPES = new ConstArrayList<String>(
+	private static final ImList<String> DIRECT_TYPES= ImCollections.newList(
 			RTypedExpr.R,
 			RTypedExpr.CHAR );
 	

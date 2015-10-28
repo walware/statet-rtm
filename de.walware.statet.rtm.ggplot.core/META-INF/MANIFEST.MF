@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: de.walware.statet.rtm.ggplot.core;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 1.0.2.qualifier
 Bundle-Vendor: WalWare.de
 Bundle-Name: R Task Model: 'ggplot2'
 Bundle-Activator: de.walware.statet.rtm.ggplot.core.RtGGPlotCorePlugin$Implementation
@@ -13,7 +13,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  de.walware.statet.rtm.base.core;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport
-Import-Package: de.walware.ecommons.collections;version="1.1.0"
+Import-Package: de.walware.ecommons.collections;version="1.1.0",
+ de.walware.jcommons.collections;version="1.0"
 Export-Package: de.walware.statet.rtm.ggplot,
  de.walware.statet.rtm.ggplot.core,
  de.walware.statet.rtm.ggplot.impl,

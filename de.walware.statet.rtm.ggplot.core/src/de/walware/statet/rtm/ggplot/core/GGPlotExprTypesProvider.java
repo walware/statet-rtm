@@ -14,7 +14,7 @@ package de.walware.statet.rtm.ggplot.core;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import de.walware.ecommons.collections.ConstArrayList;
+import de.walware.jcommons.collections.ImCollections;
 
 import de.walware.statet.rtm.base.util.IRExprTypesProvider;
 import de.walware.statet.rtm.base.util.RExprType;
@@ -26,41 +26,41 @@ import de.walware.statet.rtm.rtdata.RtDataPackage;
 public class GGPlotExprTypesProvider implements IRExprTypesProvider {
 	
 	
-	private static final RExprTypes T_DATA = new RExprTypes(
+	private static final RExprTypes T_DATA= new RExprTypes(
 			RExprType.DATAFRAME_TYPE );
 	
-	private static final RExprTypes T_DATA_VAR = new RExprTypes(
+	private static final RExprTypes T_DATA_VAR= new RExprTypes(
 			RExprType.DATAFRAME_COLUMN_TYPE );
 	
-	private static final RExprTypes T_LABEL = new RExprTypes(new ConstArrayList<RExprType>(
+	private static final RExprTypes T_LABEL= new RExprTypes(ImCollections.newList(
 			RExprType.TEXT_VALUE_TYPE,
 			RExprType.EXPR_LABEL_VALUE_TYPE ), 0 );
 	
-	private static final RExprTypes T_LABEL_VAR = new RExprTypes(new ConstArrayList<RExprType>(
+	private static final RExprTypes T_LABEL_VAR= new RExprTypes(ImCollections.newList(
 			RExprType.TEXT_VALUE_TYPE,
 			RExprType.EXPR_LABEL_VALUE_TYPE,
 			RExprType.DATAFRAME_COLUMN_TYPE), 2 );
 	
-	private static final RExprTypes T_COLOR_VAR = new RExprTypes(new ConstArrayList<RExprType>(
+	private static final RExprTypes T_COLOR_VAR= new RExprTypes(ImCollections.newList(
 			RExprType.EXPR_COLOR_VALUE_TYPE,
 			RExprType.DATAFRAME_COLUMN_TYPE ), 0 );
 	
-	private static final RExprTypes T_ALPHA_VAR = new RExprTypes(new ConstArrayList<RExprType>(
+	private static final RExprTypes T_ALPHA_VAR= new RExprTypes(ImCollections.newList(
 			RExprType.EXPR_ALPHA_VALUE_TYPE,
 			RExprType.DATAFRAME_COLUMN_TYPE ), 0 );
 	
-	private static final RExprTypes T_FONT_FAMILY_VAR = new RExprTypes(new ConstArrayList<RExprType>(
+	private static final RExprTypes T_FONT_FAMILY_VAR= new RExprTypes(ImCollections.newList(
 			RExprType.EXPR_FONT_FAMILY_VALUE_TYPE/*,
 			RExprType.DATAFRAME_COLUMN_TYPE*/ ), 0 );
 	
-	private static final RExprTypes T_OTHER_VAR = new RExprTypes(new ConstArrayList<RExprType>(
+	private static final RExprTypes T_OTHER_VAR= new RExprTypes(ImCollections.newList(
 			RExprType.EXPR_VALUE_TYPE,
 			RExprType.DATAFRAME_COLUMN_TYPE ), 0 );
 	
-	private static final RExprTypes T_FUN = new RExprTypes(
+	private static final RExprTypes T_FUN= new RExprTypes(
 			RExprType.EXPR_FUNCTION_TYPE );
 	
-	private static final RExprTypes T_OTHER = new RExprTypes(
+	private static final RExprTypes T_OTHER= new RExprTypes(
 			RExprType.EXPR_VALUE_TYPE );
 	
 	

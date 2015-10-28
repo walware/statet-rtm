@@ -13,43 +13,44 @@ package de.walware.statet.rtm.base.util;
 
 import java.util.List;
 
-import de.walware.ecommons.collections.ConstArrayList;
+import de.walware.jcommons.collections.ImCollections;
+import de.walware.jcommons.collections.ImList;
 
 
 public class RExprTypes {
 	
 	
-	private final List<RExprType> fTypes;
+	private final ImList<RExprType> types;
 	
-	private final String fDefaultTypeKey;
+	private final String defaultTypeKey;
 	
 	
 	public RExprTypes(final RExprType type) {
-		this(new ConstArrayList<RExprType>(type), type.getTypeKey());
+		this(ImCollections.newList(type), type.getTypeKey());
 	}
 	
-	public RExprTypes(final List<RExprType> types, final int defaultTypeIdx) {
-		fTypes = types;
-		fDefaultTypeKey = types.get(defaultTypeIdx).getTypeKey();
+	public RExprTypes(final ImList<RExprType> types, final int defaultTypeIdx) {
+		this.types= types;
+		this.defaultTypeKey= types.get(defaultTypeIdx).getTypeKey();
 	}
 	
-	public RExprTypes(final List<RExprType> types, final String defaultType) {
-		fTypes = types;
-		fDefaultTypeKey = defaultType;
+	public RExprTypes(final ImList<RExprType> types, final String defaultType) {
+		this.types= types;
+		this.defaultTypeKey= defaultType;
 	}
 	
 	
 	public List<RExprType> getTypes() {
-		return fTypes;
+		return this.types;
 	}
 	
 	public String getDefaultTypeKey() {
-		return fDefaultTypeKey;
+		return this.defaultTypeKey;
 	}
 	
 	public boolean contains(final String typeKey) {
-		for (int i = 0; i < fTypes.size(); i++) {
-			if (fTypes.get(i).getTypeKey() == typeKey) {
+		for (int i= 0; i < this.types.size(); i++) {
+			if (this.types.get(i).getTypeKey() == typeKey) {
 				return true;
 			}
 		}

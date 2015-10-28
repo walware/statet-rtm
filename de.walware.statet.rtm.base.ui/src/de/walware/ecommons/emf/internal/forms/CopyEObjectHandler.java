@@ -17,7 +17,9 @@ import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.edit.command.CopyToClipboardCommand;
 import org.eclipse.jface.viewers.IStructuredSelection;
 
-import de.walware.ecommons.collections.ConstArrayList;
+import de.walware.jcommons.collections.ImCollections;
+import de.walware.jcommons.collections.ImList;
+
 import de.walware.ecommons.emf.core.util.IEMFEditPropertyContext;
 
 
@@ -36,7 +38,7 @@ public class CopyEObjectHandler extends EditEObjectHandler {
 	@Override
 	protected Command createCommand(final IStructuredSelection selection,
 			final IEMFEditPropertyContext context) {
-		final List<Object> collection = new ConstArrayList<Object>(selection.toList());
+		final ImList<Object> collection= ImCollections.toList((List<Object>) selection.toList());
 		return CopyToClipboardCommand.create(context.getEditingDomain(), collection);
 	}
 	

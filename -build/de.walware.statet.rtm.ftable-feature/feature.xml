@@ -2,7 +2,7 @@
 <feature
       id="de.walware.statet.rtm.ftable"
       label="StatET for R - R tasks Add-on for Contingency Tables ('ftable')"
-      version="1.0.1.qualifier"
+      version="1.0.2.qualifier"
       provider-name="WalWare.de"
       license-feature="de.walware.opensource.license"
       license-feature-version="1.0.0">
@@ -20,7 +20,7 @@
    </license>
 
    <requires>
-      <import feature="de.walware.statet.r" version="3.5.0" match="equivalent" />
+      <import feature="de.walware.statet.r" version="3.6.0" match="equivalent" />
    </requires>
 
    <plugin

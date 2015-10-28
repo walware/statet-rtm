@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: de.walware.statet.rtm.base.ui;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 1.0.2.qualifier
 Bundle-Vendor: WalWare.de
 Bundle-Name: R Task Model: Base UI
 Bundle-Activator: de.walware.statet.rtm.base.ui.RtModelUIPlugin
@@ -31,12 +31,12 @@ Require-Bundle: org.eclipse.core.runtime;visibility:=reexport,
  de.walware.statet.r.ui
 Import-Package: com.ibm.icu.text;version="4.4.2.2",
  de.walware.ecommons,
- de.walware.ecommons.collections;version="1.1.0",
  de.walware.ecommons.databinding;version="0.10.0",
  de.walware.ecommons.graphics.core,
  de.walware.ecommons.models.core.util,
  de.walware.ecommons.preferences,
  de.walware.ecommons.ts;version="1.1.0",
+ de.walware.jcommons.collections;version="1.0",
  de.walware.rj.services;version="1.0.0"
 Export-Package: de.walware.ecommons.emf.ui.databinding,
  de.walware.ecommons.emf.ui.forms,
