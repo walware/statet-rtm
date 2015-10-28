@@ -199,7 +199,7 @@ public class RExprListProperty extends EFProperty implements ButtonGroup.IAction
 		final ViewerColumn column = fWidget.getViewerColumn(0);
 		column.setLabelProvider(new RExprLabelProvider(fTypeUIAdapters));
 		
-		fButtonGroup = new ButtonGroup<RTypedExpr>(parent, this, true);
+		fButtonGroup= new ButtonGroup<>(parent, this, true);
 		fButtonGroup.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false));
 		
 		customizeButtonGroup(fButtonGroup);
@@ -304,7 +304,7 @@ public class RExprListProperty extends EFProperty implements ButtonGroup.IAction
 						}
 						else {
 							final CompoundCommand compound = new CompoundCommand();
-							final List<RTypedExpr> after = new ArrayList<RTypedExpr>(exprs.size());
+							final List<RTypedExpr> after= new ArrayList<>(exprs.size());
 							for (final RTypedExpr expr : exprs) {
 								final int oldIndex = getIndex(expr);
 								if (oldIndex < 0) {

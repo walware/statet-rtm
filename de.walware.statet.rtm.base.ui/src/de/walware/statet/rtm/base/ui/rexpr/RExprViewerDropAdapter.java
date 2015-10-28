@@ -134,7 +134,7 @@ class RExprViewerDropAdapter extends ViewerDropAdapter {
 				}
 				else {
 					final List<RTypedExpr> list = selection.toList();
-					final List<RTypedExpr> values = new ArrayList<RTypedExpr>(list.size());
+					final List<RTypedExpr> values = new ArrayList<>(list.size());
 					for (final RTypedExpr expr : list) {
 						values.add(new RTypedExpr(expr.getTypeKey(), expr.getExpr()));
 					}
@@ -158,7 +158,7 @@ class RExprViewerDropAdapter extends ViewerDropAdapter {
 				final List<String> exprs = selectedAdapter.getInputExprs(input, fContext);
 				if (exprs != null && !exprs.isEmpty()) {
 					final String typeKey = selectedAdapter.getType().getTypeKey();
-					final List<RTypedExpr> values = new ArrayList<RTypedExpr>(exprs.size());
+					final List<RTypedExpr> values= new ArrayList<>(exprs.size());
 					for (final String expr : exprs) {
 						values.add(new RTypedExpr(typeKey, expr));
 					}
@@ -208,7 +208,7 @@ class RExprViewerDropAdapter extends ViewerDropAdapter {
 			final IStructuredSelection selection = (IStructuredSelection) input;
 			if (selection.getFirstElement() instanceof RTypedExpr) {
 				int selectedPriority = Integer.MAX_VALUE;
-				final List<String> checked = new ArrayList<String>(fUIAdapters.size());
+				final List<String> checked= new ArrayList<>(fUIAdapters.size());
 				for (final Object element : selection.toList()) {
 					final RTypedExpr expr = (RTypedExpr) element;
 					if (checked.contains(expr.getTypeKey())) {

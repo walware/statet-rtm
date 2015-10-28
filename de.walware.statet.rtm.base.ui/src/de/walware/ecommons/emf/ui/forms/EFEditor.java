@@ -134,19 +134,19 @@ public abstract class EFEditor extends FormEditor
 		 * Resources that have been removed since last activation.
 		 * @generated
 		 */
-		private final Collection<Resource> fRemovedResources = new ArrayList<Resource>();
+		private final Collection<Resource> fRemovedResources= new ArrayList<>();
 		
 		/**
 		 * Resources that have been changed since last activation.
 		 * @generated
 		 */
-		private final Collection<Resource> fChangedResources = new ArrayList<Resource>();
+		private final Collection<Resource> fChangedResources= new ArrayList<>();
 		
 		/**
 		 * Resources that have been saved.
 		 * @generated
 		 */
-		private final Collection<Resource> fSavedResources = new ArrayList<Resource>();
+		private final Collection<Resource> fSavedResources= new ArrayList<>();
 		
 		@Override
 		public void resourceChanged(final IResourceChangeEvent event) {
@@ -155,8 +155,8 @@ public abstract class EFEditor extends FormEditor
 				class ResourceDeltaVisitor implements IResourceDeltaVisitor {
 					
 					protected ResourceSet resourceSet = getEditingDomain().getResourceSet();
-					protected Collection<Resource> changedResources = new ArrayList<Resource>();
-					protected Collection<Resource> removedResources = new ArrayList<Resource>();
+					protected Collection<Resource> changedResources= new ArrayList<>();
+					protected Collection<Resource> removedResources= new ArrayList<>();
 					
 					@Override
 					public boolean visit(final IResourceDelta delta) {
@@ -289,7 +289,7 @@ public abstract class EFEditor extends FormEditor
 	 * Map to store the diagnostic associated with a resource.
 	 * @generated
 	 */
-	private final Map<Resource, Diagnostic> fResourceToDiagnosticMap = new LinkedHashMap<Resource, Diagnostic>();
+	private final Map<Resource, Diagnostic> fResourceToDiagnosticMap= new LinkedHashMap<>();
 	
 	/**
 	 * The MarkerHelper is responsible for creating workspace resource markers presented
@@ -379,7 +379,7 @@ public abstract class EFEditor extends FormEditor
 	 */
 	private IContentOutlinePage fContentOutlinePage;
 	
-	private final List<IPropertySheetPage> fPropertySheetPages = new ArrayList<IPropertySheetPage>(2);
+	private final List<IPropertySheetPage> fPropertySheetPages= new ArrayList<>(2);
 	
 	/**
 	 * This listens for when the outline becomes active
@@ -657,7 +657,7 @@ public abstract class EFEditor extends FormEditor
 			return;
 		}
 		// Save only resources that have actually changed
-		final Map<Object, Object> saveOptions = new HashMap<Object, Object>();
+		final Map<Object, Object> saveOptions= new HashMap<>();
 		saveOptions.put(Resource.OPTION_SAVE_ONLY_IF_CHANGED, Resource.OPTION_SAVE_ONLY_IF_CHANGED_MEMORY_BUFFER);
 		saveOptions.put(XMLResource.OPTION_ENCODING, "UTF-8"); //$NON-NLS-1$
 		

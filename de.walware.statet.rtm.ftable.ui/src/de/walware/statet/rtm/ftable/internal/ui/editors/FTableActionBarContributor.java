@@ -305,7 +305,7 @@ public class FTableActionBarContributor
 	 * @generated
 	 */
 	protected Collection<IAction> generateCreateChildActions(final Collection<?> descriptors, final ISelection selection) {
-		final Collection<IAction> actions = new ArrayList<IAction>();
+		final Collection<IAction> actions= new ArrayList<>();
 		if (descriptors != null) {
 			for (final Object descriptor : descriptors) {
 				actions.add(new CreateChildAction(activeEditorPart, selection, descriptor));
@@ -322,7 +322,7 @@ public class FTableActionBarContributor
 	 * @generated
 	 */
 	protected Collection<IAction> generateCreateSiblingActions(final Collection<?> descriptors, final ISelection selection) {
-		final Collection<IAction> actions = new ArrayList<IAction>();
+		final Collection<IAction> actions= new ArrayList<>();
 		if (descriptors != null) {
 			for (final Object descriptor : descriptors) {
 				actions.add(new CreateSiblingAction(activeEditorPart, selection, descriptor));

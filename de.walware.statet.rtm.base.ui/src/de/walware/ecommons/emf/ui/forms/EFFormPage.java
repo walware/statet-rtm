@@ -30,7 +30,7 @@ public abstract class EFFormPage extends FormPage
 		implements IEFFormPage {
 	
 	
-	private final List<EFFormSection> fSections = new ArrayList<EFFormSection>();
+	private final List<EFFormSection> fSections= new ArrayList<>();
 	
 	private ISelectionProvider fSelectionProvider;
 	

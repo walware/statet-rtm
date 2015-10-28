@@ -97,7 +97,7 @@ public class WrapFacetLayoutImpl extends EObjectImpl implements WrapFacetLayout 
 	@Override
 	public EList<RTypedExpr> getColVars() {
 		if (colVars == null) {
-			colVars = new EDataTypeUniqueEList<RTypedExpr>(RTypedExpr.class, this, GGPlotPackage.WRAP_FACET_LAYOUT__COL_VARS);
+			colVars= new EDataTypeUniqueEList<>(RTypedExpr.class, this, GGPlotPackage.WRAP_FACET_LAYOUT__COL_VARS);
 		}
 		return colVars;
 	}

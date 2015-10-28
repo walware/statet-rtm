@@ -96,7 +96,7 @@ public class GGPlotRCodeGen extends AbstractRCodeGenerator {
 			fEClass = eClass;
 			fRFun = rFun;
 			
-			final List<Property> list = new ArrayList<Property>();
+			final List<Property> list = new ArrayList<>();
 			addProperty(list, Literals.PROP_XVAR_PROVIDER__XVAR, "x"); //$NON-NLS-1$
 			addProperty(list, Literals.PROP_YVAR_PROVIDER__YVAR, "y"); //$NON-NLS-1$
 			addProperty(list, Literals.GEOM_TEXT_LAYER__LABEL, "label"); //$NON-NLS-1$
@@ -144,7 +144,7 @@ public class GGPlotRCodeGen extends AbstractRCodeGenerator {
 	private static final IntMap<E2R> E2R_PROPERTIES;
 	
 	static {
-		final List<E2R> list = new ArrayList<GGPlotRCodeGen.E2R>();
+		final List<E2R> list = new ArrayList<>();
 		list.add(new E2R(Literals.GG_PLOT, "ggplot")); //$NON-NLS-1$
 		list.add(new E2R(Literals.GEOM_ABLINE_LAYER, "geom_abline")); //$NON-NLS-1$
 		list.add(new E2R(Literals.GEOM_BAR_LAYER, "geom_bar")); //$NON-NLS-1$
@@ -160,7 +160,7 @@ public class GGPlotRCodeGen extends AbstractRCodeGenerator {
 		list.add(new E2R(Literals.GRID_FACET_LAYOUT, "facet_grid")); //$NON-NLS-1$
 		list.add(new E2R(Literals.WRAP_FACET_LAYOUT, "facet_wrap")); //$NON-NLS-1$
 		
-		E2R_PROPERTIES = new IntArrayMap<GGPlotRCodeGen.E2R>();
+		E2R_PROPERTIES = new IntArrayMap<>();
 		for (final E2R e2r : list) {
 			final int id = e2r.getEClass().getClassifierID();
 			E2R_PROPERTIES.put(id, e2r);

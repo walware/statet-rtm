@@ -242,7 +242,7 @@ public class RExprWidget extends Composite implements IObjValueWidget<RTypedExpr
 			fireValueChanged();
 		}
 	};
-	private final FastList<IObjValueListener<RTypedExpr>> fListeners = (FastList) new FastList<IObjValueListener>(IObjValueListener.class);
+	private final FastList<IObjValueListener<RTypedExpr>> fListeners= (FastList) new FastList<>(IObjValueListener.class);
 	
 	private int fIgnoreChanges;
 	
@@ -257,7 +257,7 @@ public class RExprWidget extends Composite implements IObjValueWidget<RTypedExpr
 		fOptions = options;
 		fTypes = types;
 		
-		final List<RExprWidget.TypeDef> typeDefs = new ArrayList<RExprWidget.TypeDef>(uiAdapters.size());
+		final List<RExprWidget.TypeDef> typeDefs= new ArrayList<>(uiAdapters.size());
 		for (final RExprTypeUIAdapter adapter : uiAdapters) {
 			final TypeDef typeDef = adapter.createWidgetDef();
 			typeDefs.add(typeDef);
@@ -627,8 +627,7 @@ public class RExprWidget extends Composite implements IObjValueWidget<RTypedExpr
 			return;
 		}
 		
-		fNextEvent = new ObjValueEvent<RTypedExpr>(this, time,
-				0, fCurrentValue, doGetValue(), SWT.NONE );
+		fNextEvent= new ObjValueEvent<>(this, time, 0, fCurrentValue, doGetValue(), SWT.NONE);
 		if (fCurrentTypeDef != null) {
 			fCurrentTypeDef.valueAboutToChange(fNextEvent);
 		}

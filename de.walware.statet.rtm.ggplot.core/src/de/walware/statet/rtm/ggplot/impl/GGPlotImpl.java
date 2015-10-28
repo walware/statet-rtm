@@ -907,7 +907,7 @@ public class GGPlotImpl extends EObjectImpl implements GGPlot {
 	@Override
 	public EList<Layer> getLayers() {
 		if (layers == null) {
-			layers = new EObjectContainmentEList<Layer>(Layer.class, this, GGPlotPackage.GG_PLOT__LAYERS);
+			layers= new EObjectContainmentEList<>(Layer.class, this, GGPlotPackage.GG_PLOT__LAYERS);
 		}
 		return layers;
 	}

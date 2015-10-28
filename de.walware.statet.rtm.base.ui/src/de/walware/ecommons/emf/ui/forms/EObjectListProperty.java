@@ -181,7 +181,7 @@ public class EObjectListProperty extends EFProperty {
 		fWidget.viewer.setLabelProvider(new LabelProvider(
 				page.getEditor().getAdapterFactory(), fWidget.viewer ));
 		
-		fButtonGroup = new ButtonGroup<EObject>(parent);
+		fButtonGroup= new ButtonGroup<>(parent);
 		fButtonGroup.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false));
 		
 		customizeButtonGroup(fButtonGroup);

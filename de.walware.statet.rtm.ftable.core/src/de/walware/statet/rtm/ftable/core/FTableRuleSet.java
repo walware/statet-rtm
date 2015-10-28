@@ -39,7 +39,7 @@ public class FTableRuleSet extends RuleSet {
 					&& (eFeature == Literals.FTABLE__COL_VARS
 							|| eFeature == Literals.FTABLE__ROW_VARS)) {
 				
-				final List<EFeatureReference> features = new ArrayList<EFeatureReference>(2);
+				final List<EFeatureReference> features= new ArrayList<>(2);
 				features.add(new EFeatureReference(eObject, Literals.FTABLE__COL_VARS));
 				features.add(new EFeatureReference(eObject, Literals.FTABLE__ROW_VARS));
 				return features;
@@ -48,7 +48,7 @@ public class FTableRuleSet extends RuleSet {
 		}
 		if (id.equals(DATA_PARENT_FEATURES_ID)) {
 			if (eObject != null) {
-				final List<EFeatureReference> features = new ArrayList<EFeatureReference>(2);
+				final List<EFeatureReference> features= new ArrayList<>(2);
 				EObject obj = eObject;
 				do {
 					if (obj instanceof FTable) {

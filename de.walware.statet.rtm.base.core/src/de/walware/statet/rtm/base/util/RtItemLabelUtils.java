@@ -87,7 +87,7 @@ public class RtItemLabelUtils {
 		
 		public LabelGenerator(final ResourceLocator resourceLocator, final EClass eClass, final String[] names) {
 			fBaseLabel = resourceLocator.getString(getLabelKey(eClass), true);
-			final List<Detail> details = new ArrayList<Detail>();
+			final List<Detail> details= new ArrayList<>();
 			for (final String name : names) {
 				final EStructuralFeature eFeature = eClass.getEStructuralFeature(name);
 				if (eFeature == null) {

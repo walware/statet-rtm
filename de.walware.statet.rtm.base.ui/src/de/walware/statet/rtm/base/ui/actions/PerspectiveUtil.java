@@ -76,14 +76,10 @@ public class PerspectiveUtil {
 				final IActivityManager activityManager = workbenchActivitySupport.getActivityManager();
 				final IIdentifier identifier = activityManager.getIdentifier(
 						WorkbenchActivityHelper.createUnifiedId(contribution) );
-				@SuppressWarnings("unchecked")
-				final
-				Set<String> idActivities = identifier.getActivityIds();
+				final Set<String> idActivities= identifier.getActivityIds();
 				
 				if (!idActivities.isEmpty()) {
-					@SuppressWarnings("unchecked")
-					final
-					Set<String> enabledIds = new HashSet<String>(activityManager.getEnabledActivityIds());
+					final Set<String> enabledIds= new HashSet<>(activityManager.getEnabledActivityIds());
 					
 					if (enabledIds.addAll(idActivities)) {
 						workbenchActivitySupport.setEnabledActivityIds(enabledIds);
@@ -100,7 +96,7 @@ public class PerspectiveUtil {
 		// gather the preferred perspectives
 		// always consider the final perspective (and those derived from it)
 		// to be preferred
-		final ArrayList<String> preferredPerspIds = new ArrayList<String>();
+		final ArrayList<String> preferredPerspIds= new ArrayList<>();
 		addPerspectiveAndDescendants(preferredPerspIds, finalPerspId);
 		{	final List<String> preferred = getPreferedPerspectives(finalPerspId);
 			for (final String preferedId : preferred) {

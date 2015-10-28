@@ -124,7 +124,7 @@ public class FacetSection extends EFFormSection {
 		final IObservableValue facetObservable = EMFEditProperties.value(context.getEditingDomain(),
 						GGPlotPackage.Literals.GG_PLOT__FACET )
 				.observeDetail(context.getBaseObservable());
-		{	final List<Object> options = new ArrayList<Object>();
+		{	final List<Object> options= new ArrayList<>();
 			options.add("Single Plot / No Facets");
 			options.add(GGPlotPackage.eINSTANCE.getGGPlotFactory().createWrapFacetLayout());
 			options.add(GGPlotPackage.eINSTANCE.getGGPlotFactory().createGridFacetLayout());

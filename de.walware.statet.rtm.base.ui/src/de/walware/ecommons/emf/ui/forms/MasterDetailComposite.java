@@ -98,7 +98,7 @@ public class MasterDetailComposite extends SashForm {
 	private final Composite fDetail;
 	
 	private boolean fCheckLayout;
-	private final Set<Sash> fSashes = new HashSet<Sash>();
+	private final Set<Sash> fSashes= new HashSet<>();
 	
 	private final IManagedForm fForm;
 	

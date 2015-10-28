@@ -91,7 +91,7 @@ public class DetailStack extends Composite {
 		fLayout = new StackLayout();
 		setLayout(fLayout);
 		
-		fDetails = new ArrayList<DetailEntry>(fLimit + 1);
+		fDetails= new ArrayList<>(fLimit + 1);
 	}
 	
 	
@@ -193,7 +193,7 @@ public class DetailStack extends Composite {
 			}
 			return;
 		}
-		final AtomicReference<RuntimeException> error = new AtomicReference<RuntimeException>();
+		final AtomicReference<RuntimeException> error= new AtomicReference<>();
 		
 		entry.dbc = new DataBindingSubContext(context.getDataBindingContext());
 		entry.dbc.run(new Runnable() {

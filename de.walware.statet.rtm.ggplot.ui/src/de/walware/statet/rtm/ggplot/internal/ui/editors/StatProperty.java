@@ -100,7 +100,7 @@ public class StatProperty extends DropDownProperty {
 	
 	@Override
 	protected List<Object> createInitialInput() {
-		final List<Object> list = new ArrayList<Object>();
+		final List<Object> list= new ArrayList<>();
 		list.add(""); //$NON-NLS-1$
 		list.add(GGPlotPackage.eINSTANCE.getGGPlotFactory().createIdentityStat());
 		list.add(GGPlotPackage.eINSTANCE.getGGPlotFactory().createSummaryStat());

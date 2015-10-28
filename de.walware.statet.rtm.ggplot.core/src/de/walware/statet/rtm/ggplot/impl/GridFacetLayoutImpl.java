@@ -85,7 +85,7 @@ public class GridFacetLayoutImpl extends EObjectImpl implements GridFacetLayout 
 	@Override
 	public EList<RTypedExpr> getRowVars() {
 		if (rowVars == null) {
-			rowVars = new EDataTypeUniqueEList<RTypedExpr>(RTypedExpr.class, this, GGPlotPackage.GRID_FACET_LAYOUT__ROW_VARS);
+			rowVars= new EDataTypeUniqueEList<>(RTypedExpr.class, this, GGPlotPackage.GRID_FACET_LAYOUT__ROW_VARS);
 		}
 		return rowVars;
 	}
@@ -98,7 +98,7 @@ public class GridFacetLayoutImpl extends EObjectImpl implements GridFacetLayout 
 	@Override
 	public EList<RTypedExpr> getColVars() {
 		if (colVars == null) {
-			colVars = new EDataTypeUniqueEList<RTypedExpr>(RTypedExpr.class, this, GGPlotPackage.GRID_FACET_LAYOUT__COL_VARS);
+			colVars= new EDataTypeUniqueEList<>(RTypedExpr.class, this, GGPlotPackage.GRID_FACET_LAYOUT__COL_VARS);
 		}
 		return colVars;
 	}

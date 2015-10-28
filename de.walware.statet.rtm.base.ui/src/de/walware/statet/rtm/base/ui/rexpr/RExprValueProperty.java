@@ -85,8 +85,7 @@ public class RExprValueProperty extends EFProperty {
 		final IEMFEditValueProperty emfProperty = EMFEditProperties.value(getEditingDomain(),
 				getEFeature() );
 		fModelObservable = emfProperty.observeDetail(getBaseObservable());
-		final IObservableValue swtObservable = new ObjValueObservable<RTypedExpr>(getRealm(),
-				fWidget );
+		final IObservableValue swtObservable= new ObjValueObservable<>(getRealm(), fWidget);
 		
 		getDataBindingContext().bindValue(swtObservable, fModelObservable);
 	}

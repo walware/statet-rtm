@@ -24,7 +24,7 @@ import de.walware.ecommons.emf.core.util.IEMFEditContext;
 public class EFPropertySet {
 	
 	
-	private final List<EFProperty> fList = new ArrayList<EFProperty>(8);
+	private final List<EFProperty> fList= new ArrayList<>(8);
 	
 	
 	public EFPropertySet() {
@@ -63,7 +63,7 @@ public class EFPropertySet {
 	}
 	
 	public List<IObservable> getModelObservables() {
-		final List<IObservable> observables = new ArrayList<IObservable>();
+		final List<IObservable> observables= new ArrayList<>();
 		for (final EFProperty property : fList) {
 			final IObservable observable = property.getPropertyObservable();
 			if (observable != null) {

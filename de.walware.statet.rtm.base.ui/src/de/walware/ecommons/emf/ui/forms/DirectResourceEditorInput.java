@@ -28,7 +28,7 @@ public class DirectResourceEditorInput extends PlatformObject
 	
 	public static URI NO_URI = URI.createURI("", true); //$NON-NLS-1$
 	
-	private static HashMap<String, Integer> NAME_NUMBERS = new HashMap<String, Integer>();
+	private static HashMap<String, Integer> NAME_NUMBERS= new HashMap<>();
 	
 	public static String createNumberedName(final String prefix) {
 		synchronized (NAME_NUMBERS) {

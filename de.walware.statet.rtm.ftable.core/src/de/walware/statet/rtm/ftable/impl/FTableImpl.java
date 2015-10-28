@@ -172,7 +172,7 @@ public class FTableImpl extends EObjectImpl implements FTable {
 	@Override
 	public EList<RTypedExpr> getColVars() {
 		if (colVars == null) {
-			colVars = new EDataTypeUniqueEList<RTypedExpr>(RTypedExpr.class, this, FTablePackage.FTABLE__COL_VARS);
+			colVars= new EDataTypeUniqueEList<>(RTypedExpr.class, this, FTablePackage.FTABLE__COL_VARS);
 		}
 		return colVars;
 	}
@@ -185,7 +185,7 @@ public class FTableImpl extends EObjectImpl implements FTable {
 	@Override
 	public EList<RTypedExpr> getRowVars() {
 		if (rowVars == null) {
-			rowVars = new EDataTypeUniqueEList<RTypedExpr>(RTypedExpr.class, this, FTablePackage.FTABLE__ROW_VARS);
+			rowVars= new EDataTypeUniqueEList<>(RTypedExpr.class, this, FTablePackage.FTABLE__ROW_VARS);
 		}
 		return rowVars;
 	}

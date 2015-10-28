@@ -58,7 +58,7 @@ public class FTableExprTypesUIProvider extends FTableExprTypesProvider
 	@Override
 	public List<RExprTypeUIAdapter> getUIAdapters(final RExprTypes types,
 			final EClass eClass, final EStructuralFeature eFeature) {
-		final List<RExprTypeUIAdapter> uiAdapters = new ArrayList<RExprTypeUIAdapter>();
+		final List<RExprTypeUIAdapter> uiAdapters= new ArrayList<>();
 		for (final RExprType type : types.getTypes()) {
 			RExprTypeUIAdapter uiAdapter = null;
 			if (type == RExprType.DATAFRAME_TYPE) {

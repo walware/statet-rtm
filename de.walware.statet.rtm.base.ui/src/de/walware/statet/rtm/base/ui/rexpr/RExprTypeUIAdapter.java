@@ -114,7 +114,7 @@ public class RExprTypeUIAdapter {
 	}
 	
 	protected List<String> collectElementName(final List<?> elements, final IElementNameProvider nameProvider) {
-		final List<String> expressions = new ArrayList<String>(elements.size());
+		final List<String> expressions= new ArrayList<>(elements.size());
 		for (final Object element : elements) {
 			final IElementName elementName = nameProvider.getElementName(element);
 			if (elementName instanceof RElementName) {

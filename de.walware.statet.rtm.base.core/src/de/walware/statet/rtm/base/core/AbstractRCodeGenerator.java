@@ -183,7 +183,7 @@ public abstract class AbstractRCodeGenerator {
 	}
 	
 	
-	protected final List<String> fRequiredPkgs = new ArrayList<String>();
+	protected final List<String> fRequiredPkgs= new ArrayList<>();
 	protected final StringBuilder fBuilder = new StringBuilder();
 	
 	private final String fNewLine = "\n";

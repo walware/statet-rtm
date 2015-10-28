@@ -23,7 +23,7 @@ import de.walware.ecommons.emf.core.util.IEMFEditContext;
 public abstract class MainDetail extends Detail {
 	
 	
-	private final List<EFFormSection> fSections = new ArrayList<EFFormSection>();
+	private final List<EFFormSection> fSections= new ArrayList<>();
 	
 	
 	public MainDetail(final DetailStack parent) {
