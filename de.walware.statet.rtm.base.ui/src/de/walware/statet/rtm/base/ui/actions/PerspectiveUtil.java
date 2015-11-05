@@ -26,9 +26,9 @@ import org.eclipse.ui.activities.WorkbenchActivityHelper;
 import org.eclipse.ui.internal.registry.PerspectiveDescriptor;
 import org.eclipse.ui.statushandlers.StatusManager;
 
-import de.walware.ecommons.preferences.Preference;
-import de.walware.ecommons.preferences.Preference.StringPref2;
 import de.walware.ecommons.preferences.PreferencesUtil;
+import de.walware.ecommons.preferences.core.Preference;
+import de.walware.ecommons.preferences.core.Preference.StringPref2;
 import de.walware.ecommons.ui.util.UIAccess;
 
 import de.walware.statet.rtm.base.internal.ui.actions.Messages;
