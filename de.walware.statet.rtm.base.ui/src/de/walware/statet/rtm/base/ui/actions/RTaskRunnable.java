@@ -78,14 +78,19 @@ public class RTaskRunnable extends AbstractStatetRRunnable implements IToolRunna
 		if (!checkPackages(r, monitor)) {
 			return;
 		}
-		
-		r.submitToConsole(fSnippet.getRCode(), monitor);
+		r.briefAboutToChange();
+		try {
+			r.submitToConsole(fSnippet.getRCode(), monitor);
+		}
+		finally {
+			r.briefChanged(IRConsoleService.AUTO_CHANGE);
+		}
 	}
 	
 	
 	protected boolean checkPackages(final IRConsoleService r,
 			final IProgressMonitor monitor) throws CoreException {
-		final IREnv rEnv = (IREnv) r.getTool().getAdapter(IREnv.class);
+		final IREnv rEnv = r.getTool().getAdapter(IREnv.class);
 		if (rEnv == null) {
 			return true;
 		}
