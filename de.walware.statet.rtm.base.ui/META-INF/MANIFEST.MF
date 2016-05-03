@@ -7,7 +7,7 @@ Bundle-Name: R Task Model: Base UI
 Bundle-Activator: de.walware.statet.rtm.base.ui.RtModelUIPlugin
 Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.core.runtime;visibility:=reexport,
  org.eclipse.core.resources,
  de.walware.statet.rtm.base.core;bundle-version="1.0.0",
@@ -29,7 +29,7 @@ Require-Bundle: org.eclipse.core.runtime;visibility:=reexport,
  de.walware.rj.eclient.graphics;bundle-version="1.2.0",
  de.walware.statet.base.ui,
  de.walware.statet.r.ui
-Import-Package: com.ibm.icu.text;version="4.4.2.2",
+Import-Package: com.ibm.icu.text;version="52.1",
  de.walware.ecommons,
  de.walware.ecommons.databinding;version="0.10.0",
  de.walware.ecommons.graphics.core,
